@@ -26,7 +26,7 @@
       <module name="campaign-service" target="17" />
       <module name="cart-service" target="17" />
       <module name="chatbot-service" target="17" />
-      <module name="eureka-server" target="1.5" />
+      <module name="eureka-server" target="17" />
       <module name="order-service" target="17" />
       <module name="payment-service" target="17" />
       <module name="product-service" target="17" />
@@ -42,6 +42,7 @@
       <module name="campaign-service" options="-parameters" />
       <module name="cart-service" options="-parameters" />
       <module name="chatbot-service" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
