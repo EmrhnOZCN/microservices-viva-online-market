@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="payment-service" />
+        <module name="stockManangment-service" />
         <module name="product-service" />
         <module name="user-service" />
         <module name="order-service" />
         <module name="basket-service" />
-        <module name="payment-service" />
-        <module name="stockManangment-service" />
+        <module name="admin-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin-service" target="17" />
       <module name="basket-service" target="17" />
       <module name="order-service" target="17" />
       <module name="payment-service" target="17" />
@@ -25,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-service" options="-parameters" />
       <module name="basket-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
