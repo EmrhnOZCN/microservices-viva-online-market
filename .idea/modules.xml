@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/backend/campaign-service/campaign-service.iml" filepath="$PROJECT_DIR$/backend/campaign-service/campaign-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/cart-service/cart-service.iml" filepath="$PROJECT_DIR$/backend/cart-service/cart-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/chatbot-service/chatbot-service.iml" filepath="$PROJECT_DIR$/backend/chatbot-service/chatbot-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/backend/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/order-service/order-service.iml" filepath="$PROJECT_DIR$/backend/order-service/order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/payment-service/payment-service.iml" filepath="$PROJECT_DIR$/backend/payment-service/payment-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/product-service/product-service.iml" filepath="$PROJECT_DIR$/backend/product-service/product-service.iml" />
