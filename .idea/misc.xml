@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/backend/chatbot-service/pom.xml" />
         <option value="$PROJECT_DIR$/backend/campaign-service/pom.xml" />
         <option value="$PROJECT_DIR$/backend/cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/report-service/pom.xml" />
       </list>
     </option>
   </component>
