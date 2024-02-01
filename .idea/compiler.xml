@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="chatbot-service" />
         <module name="payment-service" />
         <module name="stockManangment-service" />
         <module name="product-service" />
@@ -13,11 +14,14 @@
         <module name="order-service" />
         <module name="basket-service" />
         <module name="admin-service" />
+        <module name="campaign-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-service" target="17" />
       <module name="basket-service" target="17" />
+      <module name="campaign-service" target="17" />
+      <module name="chatbot-service" target="17" />
       <module name="order-service" target="17" />
       <module name="payment-service" target="17" />
       <module name="product-service" target="17" />
@@ -29,6 +33,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-service" options="-parameters" />
       <module name="basket-service" options="-parameters" />
+      <module name="campaign-service" options="-parameters" />
+      <module name="chatbot-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
