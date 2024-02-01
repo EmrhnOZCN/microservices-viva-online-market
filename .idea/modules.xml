@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/backend/basket-service/basket-service.iml" filepath="$PROJECT_DIR$/backend/basket-service/basket-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/order-service/order-service.iml" filepath="$PROJECT_DIR$/backend/order-service/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/payment-service/payment-service.iml" filepath="$PROJECT_DIR$/backend/payment-service/payment-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/product-service/product-service.iml" filepath="$PROJECT_DIR$/backend/product-service/product-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/stockManangment-service/stockManangment-service.iml" filepath="$PROJECT_DIR$/backend/stockManangment-service/stockManangment-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/user-service/user-service.iml" filepath="$PROJECT_DIR$/backend/user-service/user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vivaproject.iml" filepath="$PROJECT_DIR$/.idea/vivaproject.iml" />
     </modules>

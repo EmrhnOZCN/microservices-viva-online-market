@@ -10,12 +10,16 @@
         <module name="user-service" />
         <module name="order-service" />
         <module name="basket-service" />
+        <module name="payment-service" />
+        <module name="stockManangment-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="basket-service" target="17" />
       <module name="order-service" target="17" />
+      <module name="payment-service" target="17" />
       <module name="product-service" target="17" />
+      <module name="stockManangment-service" target="17" />
       <module name="user-service" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -23,7 +27,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="basket-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="payment-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
+      <module name="stockManangment-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
