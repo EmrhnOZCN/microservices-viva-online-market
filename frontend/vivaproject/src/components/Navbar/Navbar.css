@@ -1,0 +1,82 @@
+/* Navbar.css */
+
+.navbar-brand {
+    margin-left: 80px;
+    margin-right: 20px;
+  
+
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-buttons form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-buttons input {
+    width: 600px;
+    height: 5;
+    margin-right: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Soluk siyah çerçeve */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.navbar-buttons button {
+    font-size: 12px;
+    width: 50px;
+    height: 35px;
+    background-color: #ff7e00;
+    color: #fff;
+    border: none;
+    font-size: 600 .75rem/1.33 Inter, sans-serif; /* Yazı boyutunu belirle */
+
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-buttons button:hover {
+    background-color: #ff7e00;;
+}
+
+.navbar-buttons .order-track-button,
+.navbar-buttons .login-button {
+    background-color: white;
+    color: black;
+    width: 160px;
+    margin-left: 30px;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Soluk siyah çerçeve */
+    border-radius: 20px;
+}
+
+.navbar-buttons .order-track-button::before,
+.navbar-buttons .login-button::before {
+    content: '\2022\2022\2022';  /* Nokta karakterleri */
+    position: absolute;
+    font-size: 1.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.1); /* Soluk siyah nokta rengi */
+    opacity: 0.7;
+}
+
+/* Arama yazısı için eklenen stil */
+.navbar-buttons .btn-outline-success {
+    position: relative;
+}
+
+.navbar-buttons .btn-outline-success span {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

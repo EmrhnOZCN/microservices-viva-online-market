@@ -1,0 +1,14 @@
+.w-100 {
+    width: 90%!important;
+    height: 350px;
+    border-radius: 20px;
+ 
+}
+.w-top{
+    width: 90%!important;
+    height: 80px;
+    border-radius: 20px;
+}
+.d-block {
+    display: inline-block!important;
+}
