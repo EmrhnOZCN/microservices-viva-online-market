@@ -3,27 +3,52 @@ import Slider from '../Slider/Slider';
 import meyve from '../../assets/meyvesebze.jpg';
 
 const Category = () => {
-  const handleClick = (index) => {
+  const handleClick = (category) => {
     // Tıklanabilir resmin işlemlerini buraya ekleyebilirsiniz
-    console.log(`Resim ${index} tıklandı.`);
+    console.log(`${category} kategorisi tıklandı.`);
   };
 
+  const categories = [
+    'Tüm İndirimli Ürünler',
+    'Sadece Viva\'a',
+    'Migroskop',
+    'Meyve, Sebze',
+    'Et, Tavuk, Balık',
+    'Süt, Kahvaltılık',
+    'Temel Gıda',
+    'Dondurma',
+    'Atıştırmalık',
+    'Fırın, Pastane',
+    'Deterjan, Temizlik',
+    'Kağıt, Islak Mendil',
+    'Bebek',
+    'Ev, Yaşam',
+    'Çiçek',
+    'Pet Shop',
+    'Elektronik',
+  ];
+
   return (
-    <div className="container">
+    <div className="container mt-3">
+      {/* Kategoriler Başlığı */}
+      <h3 className="text-center mb-2">Kategoriler</h3>
+
       {/* Kartlar */}
-      <div className="row mt-4">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((index) => (
-          <div key={index} className="col-md-2 mb-3">
-            <div className="position-relative">
-              <img
-                className="img-fluid rounded"
-                src={meyve}
-                alt={`Card ${index}`}
-                onClick={() => handleClick(index)}
-                style={{ cursor: 'pointer' }}
-              />
-              <div className="card-overlay">
-                <p className="overlay-text">Meyve ve Sebze {index}</p>
+      <div className="row">
+        {categories.map((category, index) => (
+          <div key={index} className="col-md-2 mb-2">
+            <div className="card border-secondary" style={{ borderRadius: '10px', overflow: 'hidden' }}>
+              <div className="position-relative">
+                <img
+                  className="img-fluid rounded-circle"
+                  src={meyve}
+                  alt={`Category ${index}`}
+                  onClick={() => handleClick(category)}
+                  style={{ cursor: 'pointer', width: '120px', height: '120px' }}
+                />
+              </div>
+              <div className="card-body text-center">
+                <p className="card-text">{category}</p>
               </div>
             </div>
           </div>
