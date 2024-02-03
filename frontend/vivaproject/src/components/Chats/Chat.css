@@ -6,6 +6,15 @@
     z-index: 1000;
     width: 300px;
   }
+
+
+  #chat-container2 {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 1000;
+    width: 150px;
+  }
 #chat1 .form-outline .form-control~.form-notch div {
     pointer-events: none;
     border: 1px solid;

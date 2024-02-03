@@ -1,0 +1,62 @@
+/* Navbar2.css */
+
+.custom-button,
+.login-button {
+  font-size: 12px;
+  font-weight: 400; /* Adjust font weight for thinner text */
+  border-radius: 10px;
+  padding: 6px 15px;
+  margin-right: 25px;
+  border: 2px solid #ff7e00;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  width: 150px;
+}
+
+.custom-button:hover,
+.login-button:hover {
+  background-color: #ff7e00;
+  color: white;
+}
+
+.custom-button::before,
+.login-button::before {
+  content: '\2022\2022\2022';
+  position: absolute;
+  font-size: 1.2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-buttons input {
+  width: 600px;
+  height: 35px;
+  margin-right: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Arama yazısı için eklenen stil */
+.navbar-buttons .btn-outline-success {
+  position: relative;
+}
+
+.navbar-buttons .btn-outline-success span {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

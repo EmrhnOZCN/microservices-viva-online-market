@@ -18,23 +18,23 @@
 }
 
 .navbar-buttons input {
-    width: 600px;
+    width: 650px;
     height: 5;
-    margin-right: 10px;
+    margin-left: 170px;
     border: 2px solid rgba(0, 0, 0, 0.1); /* Soluk siyah çerçeve */
     border-radius: 5px;
     padding: 5px;
 }
 
 .navbar-buttons button {
-    font-size: 12px;
+    font-size: 11px;
     width: 50px;
     height: 35px;
     background-color: #ff7e00;
     color: #fff;
     border: none;
     font-size: 600 .75rem/1.33 Inter, sans-serif; /* Yazı boyutunu belirle */
-
+    
     border-radius: 5px;
     cursor: pointer;
     position: relative;
@@ -79,4 +79,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-

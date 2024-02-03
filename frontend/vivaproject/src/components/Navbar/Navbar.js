@@ -1,16 +1,14 @@
-// Navbar.js
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
- // useNavigate ekledik
 
 import logo from '../../assets/cart.png';
 
 const Navbar = () => {
-  // useNavigate'u tanımladık
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,8 +23,9 @@ const Navbar = () => {
   const handleLogin = () => {
     console.log('Üye Girişi butonuna tıklandı');
     // Üye girişi işlemleri buraya gelebilir
-    // User.js sayfasına yönlendirme yapalım
-  
+
+    // useNavigate hook'unu kullanarak User.js sayfasına yönlendirme yapalım
+    navigate('/auth'); // veya istediğiniz route'a yönlendirme yapabilirsiniz
   };
 
   return (
@@ -54,7 +53,7 @@ const Navbar = () => {
             <button className="order-track-button" type="button" onClick={handleOrderTrack}>
               Sipariş Takip <FontAwesomeIcon icon={faChevronRight} />
             </button>
-            <button className="login-button" type="button" onClick={handleLogin}>
+            <button className="order-track-button" type="button" onClick={handleLogin}>
               <FontAwesomeIcon icon={faUser} /> Üye Ol veya Giriş Yap <FontAwesomeIcon icon={faChevronDown} />
             </button>
           </div>

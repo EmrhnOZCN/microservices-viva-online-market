@@ -2,23 +2,16 @@ import React, { useState } from 'react';
 import './Navbar2.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faChevronRight, faChevronDown, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronDown, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-modal';
-import ReactModal from 'react-modal';
-import logo from '../../assets/cart.png';
 import KonumModal from './KonumModal';
+import CategoryModal from './CategoryModal';
 
 const Navbar2 = () => {
   const [isKonumModalOpen, setIsKonumModalOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Arama işlemleri buraya gelebilir
-  };
+  const [isKategoriModalOpen, setIsKategoriModalOpen] = useState(false);
 
   const handleSelect1 = () => {
-    console.log('Konum Seç butonuna tıklandı');
     setIsKonumModalOpen(true);
   };
 
@@ -27,29 +20,35 @@ const Navbar2 = () => {
   };
 
   const handleSelect2 = () => {
-    console.log('Üye Girişi butonuna tıklandı');
-    // Modal'i aç
-    setIsModalOpen(true);
+    setIsKategoriModalOpen(true);
+  };
+  const handleSelect3 = () => {
+    
   };
 
-  const handleCloseModal = () => {
-    // Modal kapatıldığında
-    setIsModalOpen(false);
+  const handleCloseKategoriModal = () => {
+    setIsKategoriModalOpen(false);
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light m-3">
       <div className="container-fluid mx-auto">
         <div className="ml-auto d-flex align-items-center">
-          <button className="order-track-button" type="button" onClick={handleSelect1}>
+          <button className="custom-button" type="button" onClick={handleSelect1}>
             Konum Seç <FontAwesomeIcon icon={faChevronRight} />
           </button>
-          <button className="login-button" type="button" onClick={handleSelect2}>
-            Katagoriler <FontAwesomeIcon icon={faChevronDown} />
+          <button className="custom-button" type="button" onClick={handleSelect2}>
+            Kategoriler <FontAwesomeIcon icon={faChevronDown} />
+          </button>
+        </div>
+        <div className="ml-auto d-flex align-items-center">
+          <button className="custom-button" type="button" onClick={handleSelect3}>
+            <FontAwesomeIcon icon={faShoppingCart} /> Sepetim <span className="price-info">$50.00</span>
+            <FontAwesomeIcon icon={faChevronDown} />
           </button>
         </div>
       </div>
-      <ReactModal
+      <Modal
         isOpen={isKonumModalOpen}
         onRequestClose={handleCloseKonumModal}
         contentLabel='Konum Modalı'
@@ -76,11 +75,38 @@ const Navbar2 = () => {
           },
         }}
       > 
-        <button onClick={handleCloseKonumModal} style={{ position: 'absolute', top: '-0px', right: '20px', fontSize: '52px', cursor: 'pointer', padding: '10px', border: 'none', background: 'none', color: '#000' }}>
-          &#x2715;
-        </button>
         <KonumModal onClose={handleCloseKonumModal} />
-      </ReactModal>
+      </Modal>
+      <Modal
+        isOpen={isKategoriModalOpen}
+        onRequestClose={handleCloseKategoriModal}
+        contentLabel='Kategori Modalı'
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 1000,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
+          content: {
+            width: '80%',
+            maxWidth: '800px',
+            
+            height: 'auto',
+            maxHeight: '800px',
+            margin: '0 auto',
+            border: 'none',
+            borderRadius: '15px',
+            backgroundColor: '#fff',
+            padding: 20,
+            overflow: 'visible',
+            position: 'relative',
+          },
+        }}
+      > 
+        <CategoryModal onClose={handleCloseKategoriModal} />
+      </Modal>
     </nav>
   );
 };

@@ -1,7 +1,7 @@
-// KonumModal.js
 import React from 'react';
 import Modal from 'react-modal';
-import { faAddressCard, faStore, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faAddressCard, faStore, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 
 const KonumModal = ({ onClose }) => {
   return (
@@ -32,24 +32,25 @@ const KonumModal = ({ onClose }) => {
         },
       }}
     >
-      <button onClick={onClose} style={{ position: 'absolute', top: '-70px', right: '20px', fontSize: '52px', cursor: 'pointer', padding: '10px', border: 'none', background: 'none', color: '#000' }}>
-        &#x2715;
+      <button onClick={onClose} style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '24px', cursor: 'pointer', padding: '5px', border: 'none', background: 'none', color: '#000' }}>
+        <FontAwesomeIcon icon={faTimes} />
       </button>
-      <h3>Teslimat Yöntemini Belirle</h3>
-      <div className="delivery-options">
-        <button className="delivery-option-button" onClick={() => console.log('Adresime Gelsin')}>
-          <img alt="address" src="assets/images/delivery/address.svg" className="icon" />
+      <h3 style={{ textAlign: 'center' }}>Merhaba!</h3>
+      <p style={{ textAlign: 'center', fontSize: '18px', margin: '10px 0' }}>Siparişini nasıl getirelim?</p>
+      <div className="delivery-options" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '10px' }} onClick={() => console.log('Adresime Gelsin')}>
+          <FontAwesomeIcon icon={faAddressCard} className="icon" />
           <div className="subtitle-1 text-align-center">Adresime Gelsin</div>
         </button>
-        <button className="delivery-option-button" onClick={() => console.log('Mağazadan Alacağım')}>
-          <img alt="store" src="../../assets/store.svg" className="icon" />
+        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '10px' }} onClick={() => console.log('Mağazadan Alacağım')}>
+          <FontAwesomeIcon icon={faStore} className="icon" />
           <div>
             <div className="subtitle-1">Mağazadan Alacağım</div>
             <div className="text-color-success mat-caption-normal free-delivery--label">Mağazadan Ücretsiz Teslimat!</div>
           </div>
         </button>
-        <button className="delivery-option-button" onClick={() => console.log('Bağış Yapacağım')}>
-          <img alt="foundation" src="assets/images/delivery/foundation.svg" className="icon" />
+        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '10px' }} onClick={() => console.log('Bağış Yapacağım')}>
+          <FontAwesomeIcon icon={faHandHoldingHeart} className="icon" />
           <div className="subtitle-1 text-color-black text-align-center">Bağış Yapacağım</div>
         </button>
       </div>
