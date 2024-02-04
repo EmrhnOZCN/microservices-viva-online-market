@@ -8,31 +8,31 @@ import img1 from '../../assets/meyvesebze.jpg';
 
 const Products = () => {
     useEffect(() => {
-        const prev = document.getElementById('prev');
-        const next = document.getElementById('next');
+        const prevv = document.getElementById('prevv');
+        const nextt = document.getElementById('nextt');
 
-        const slider = document.querySelector('.slider');
-        const product = document.querySelector('.products');
+        const sliderr = document.querySelector('.sliderr');
+        const productt = document.querySelector('.productss');
 
         const autoScroll = () => {
             // Slider'ın sonuna geldiyse, başa taşı
-            if (slider.scrollLeft + slider.clientWidth === slider.scrollWidth) {
-                slider.scrollLeft = 0;
+            if (sliderr.scrollLeft + sliderr.clientWidth === sliderr.scrollWidth) {
+                sliderr.scrollLeft = 0;
             } else {
-                slider.scrollLeft += product.offsetWidth + 40;
+                sliderr.scrollLeft += productt.offsetWidth + 40;
             }
         };
 
-        next.addEventListener('click', () => {
+        nextt.addEventListener('click', () => {
             autoScroll();
         });
 
-        prev.addEventListener('click', () => {
+        prevv.addEventListener('click', () => {
             // Slider'ın başına geldiyse, sona taşı
-            if (slider.scrollLeft === 0) {
-                slider.scrollLeft = slider.scrollWidth;
+            if (sliderr.scrollLeft === 0) {
+                sliderr.scrollLeft = sliderr.scrollWidth;
             } else {
-                slider.scrollLeft -= product.offsetWidth + 40;
+                sliderr.scrollLeft -= productt.offsetWidth + 40;
             }
         });
 
@@ -40,104 +40,106 @@ const Products = () => {
 
         return () => {
             clearInterval(intervalId);
-            next.removeEventListener('click', autoScroll);
-            prev.removeEventListener('click', autoScroll);
+            nextt.removeEventListener('click', autoScroll);
+            prevv.removeEventListener('click', autoScroll);
         };
     }, []);
 
     return (
-
-        <div className='slider-container'>
-          <button id='prev' className='btn-scroll'>
+        <div className='container'>
+            <h3 className="mt-5" style={{ fontSize: '40px' }}>Fırsat Ürünleri</h3>
+        <div className='sliderr-containerr'>
+       
+        <button id='prevv' className='btnn-scroll'>
                 <FontAwesomeIcon icon={faArrowLeft} />
             </button>
-
-        <div className='slider'>
-            <div className='products'>
-                <div className='product-img'>
+        <div className='sliderr'>
+        
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
-            <div className='products'>
-                <div className='product-img'>
+            <div className='productss'>
+                <div className='productt-img'>
                     <img src={img1} alt="Product"></img>
                 </div>
-                <h3 className='product-name'>Meyve ve Sebze</h3>
-                <h1 className='product-price'>50.50 TL</h1>
-                <button className='btn-buy'>
+                <h3 className='productt-name'>Meyve ve Sebze</h3>
+                <h1 className='productt-price'>50.50 TL</h1>
+                <button className='btnn-buy'>
                     <FontAwesomeIcon icon={faPlus} /> Sepete Ekle
                 </button>
             </div>
         </div>
-        <button id='next' className='btn-scroll' >
+        <button id='nextt' className='btnn-scroll' >
                 <FontAwesomeIcon icon={faArrowRight} />
             </button>
-        </div>
+        </div></div>
     );
 };
 

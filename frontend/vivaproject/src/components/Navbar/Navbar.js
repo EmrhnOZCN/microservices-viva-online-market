@@ -25,11 +25,11 @@ const Navbar = () => {
     // Üye girişi işlemleri buraya gelebilir
 
     // useNavigate hook'unu kullanarak User.js sayfasına yönlendirme yapalım
-    navigate('/auth'); // veya istediğiniz route'a yönlendirme yapabilirsiniz
+    navigate('/giris'); // veya istediğiniz route'a yönlendirme yapabilirsiniz
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light m-3">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white m-3">
       <div className="container-fluid mx-auto">
         <div className="navbar-brand d-flex align-items-center">
           <img src={logo} alt="Logo" className="logo" />
@@ -59,6 +59,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+    
+      <hr />
     </nav>
   );
 };

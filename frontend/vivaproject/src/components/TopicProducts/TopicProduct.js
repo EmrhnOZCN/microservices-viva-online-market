@@ -46,13 +46,23 @@ const TopicProduct = () => {
     }, []);
 
     return (
+        <div className='container'>
+
+        <div className='top-section'>
+                <div className="flex-container">
+                    <h3 className="mt-5" style={{ fontSize: '40px' }}>Çok Satanlar</h3>
+                    <button className='btn-view-all'>Tümünü Gör <span>&gt;</span></button>
+                </div>
+            </div>
+        
 
         <div className='slider-container'>
+            
              
           <button id='prev' className='btn-scroll'>
                 <FontAwesomeIcon icon={faArrowLeft} />
             </button>
-          
+         
         <div className='slider'>
             
             <div className='products'>
@@ -139,7 +149,7 @@ const TopicProduct = () => {
         <button id='next' className='btn-scroll' >
                 <FontAwesomeIcon icon={faArrowRight} />
             </button>
-        </div>
+        </div></div>
     );
 };
 

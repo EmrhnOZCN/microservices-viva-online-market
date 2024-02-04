@@ -1,25 +1,38 @@
 
-.slider-container {
+.sliderr-container {
+    position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
-.btn-scroll {
+
+.btnn-scroll {
     position: absolute;
     background: transparent;
     color: orange;
-    font-size: 40px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
     filter: drop-shadow(0 0 15px rgba(0,0,0,.6));
+    transition: transform 0.3s ease-in-out;
 }
-#prev{
-    left: 40px;
-    z-index: 99;
+
+#prevv {
+    left: 50px;
+    transform: translateX(-50%);
 }
-#next{
-    right: 40px;
+
+#nextt {
+    right: 70px;
+    
+    transform: translateX(50%);
 }
-.slider {
+
+#prevv:hover,
+#nextt:hover {
+    transform: scale(1.2) translateX(-50%);
+}
+.sliderr {
 
     
     width: 100%;
@@ -29,7 +42,7 @@
     scroll-behavior: smooth;
     
 
-    .products{
+    .productss{
         min-width: 200px;
         background-color: rgb(255,255,255,.4);
         backdrop-filter: blur(30px);
@@ -41,7 +54,7 @@
         box-shadow: 0 0 15px rgba(0, 0, 0, .4);
         margin: 0 20px;
 
-        .product-img{
+        .productt-img{
             width: 100%;
             border-radius: 20px;
             overflow: hidden;
@@ -55,18 +68,18 @@
         }
 
 
-        .product-name{
+        .productt-name{
             font-weight: 400;
             color: black;
             font-size: 17px;
         }
-        .product-price{
+        .productt-price{
             font-weight: 600;
             font-size: 20px;
             color: green;
         }
 
-        .btn-buy{
+        .btnn-buy{
             width: 100%;
             padding: .4rem;
             background: orange;

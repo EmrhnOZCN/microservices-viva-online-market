@@ -31,8 +31,8 @@ const Navbar2 = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light m-3">
-      <div className="container-fluid mx-auto">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white m-4">
+      <div className="container-fluid mx-auto ">
         <div className="ml-auto d-flex align-items-center">
           <button className="custom-button" type="button" onClick={handleSelect1}>
             Konum Seç <FontAwesomeIcon icon={faChevronRight} />
@@ -107,6 +107,7 @@ const Navbar2 = () => {
       > 
         <CategoryModal onClose={handleCloseKategoriModal} />
       </Modal>
+     
     </nav>
   );
 };

@@ -1,47 +1,12 @@
-// Login.js
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGoogle, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import './Login.css';
 
-import React, { useState } from 'react';
-
-const Login = ({ onClose }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Burada kullanıcı adı ve şifre ile giriş yapma işlemleri gerçekleştirilebilir
-    // Örneğin, bir API çağrısı yapılabilir.
-
-    // Ardından giriş başarılı ise onClose fonksiyonunu çağırarak Login component'ini kapatabiliriz.
-    onClose();
-  };
-
+const Login = () => {
   return (
-    <div className="login-container">
-      <form onSubmit={handleLogin}>
-        <label>
-          Kullanıcı Adı:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Şifre:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Giriş Yap</button>
-      </form>
-    </div>
+   <h1></h1>
   );
-};
+}
 
 export default Login;

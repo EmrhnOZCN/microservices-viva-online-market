@@ -7,17 +7,23 @@
     position: absolute;
     background: transparent;
     color: orange;
-    font-size: 40px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
     filter: drop-shadow(0 0 15px rgba(0,0,0,.6));
 }
 #prev{
-    left: 40px;
+    left: 120px;
     z-index: 99;
 }
 #next{
-    right: 40px;
+    right: 120px;
+}
+#prev:hover{
+    transform: scale(1) translateX(-50%);
+}
+#next:hover {
+    transform: scale(1) translateX(50%);
 }
 .slider {
 
@@ -25,7 +31,7 @@
     width: 100%;
     overflow-x: auto;
     display: flex;
-    padding: 3rem 5rem;
+    padding: 1.2rem 5rem;
     scroll-behavior: smooth;
     
 
@@ -38,7 +44,7 @@
         flex-direction: column;
         padding: 1rem;
         border-radius: 20px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .4);
         margin: 0 20px;
 
         .product-img{
@@ -84,3 +90,26 @@
     }
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 16px;
+
+}
+
+.btn-view-all {
+    background: #fff;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    color: orange;
+    font-size: 13px;
+    border: none;
+    
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-view-all:hover {
+    color: darkorange;
+}

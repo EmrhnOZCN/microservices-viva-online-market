@@ -22,7 +22,7 @@ const KonumModal = ({ onClose }) => {
           maxWidth: '800px',
           height: 'auto',
           maxHeight: '800px',
-          margin: '0 auto',
+          margin: 'auto', // Center horizontally and vertically
           border: 'none',
           borderRadius: '15px',
           backgroundColor: '#fff',
@@ -38,18 +38,18 @@ const KonumModal = ({ onClose }) => {
       <h3 style={{ textAlign: 'center' }}>Merhaba!</h3>
       <p style={{ textAlign: 'center', fontSize: '18px', margin: '10px 0' }}>Siparişini nasıl getirelim?</p>
       <div className="delivery-options" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '10px' }} onClick={() => console.log('Adresime Gelsin')}>
+        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '12px' }} onClick={() => console.log('Adresime Gelsin')}>
           <FontAwesomeIcon icon={faAddressCard} className="icon" />
           <div className="subtitle-1 text-align-center">Adresime Gelsin</div>
         </button>
-        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '10px' }} onClick={() => console.log('Mağazadan Alacağım')}>
+        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '12px' }} onClick={() => console.log('Mağazadan Alacağım')}>
           <FontAwesomeIcon icon={faStore} className="icon" />
           <div>
             <div className="subtitle-1">Mağazadan Alacağım</div>
             <div className="text-color-success mat-caption-normal free-delivery--label">Mağazadan Ücretsiz Teslimat!</div>
           </div>
         </button>
-        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '10px' }} onClick={() => console.log('Bağış Yapacağım')}>
+        <button className="delivery-option-button" style={{ borderRadius: '15px', width: '80%', marginBottom: '12px' }} onClick={() => console.log('Bağış Yapacağım')}>
           <FontAwesomeIcon icon={faHandHoldingHeart} className="icon" />
           <div className="subtitle-1 text-color-black text-align-center">Bağış Yapacağım</div>
         </button>

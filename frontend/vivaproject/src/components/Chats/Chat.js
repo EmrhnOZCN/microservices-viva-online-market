@@ -43,7 +43,7 @@ const Chat = () => {
 
       {!isChatOpen && (
         <div id="chat-container2" style={{ backgroundColor: 'rgba(57, 192, 237, 0.9)', borderRadius: '10px', padding: '10px', display: 'inline-block', cursor: 'pointer' }} onClick={toggleChat}>
-          <p style={{ color: 'white', margin: '0', padding: '0', bottom: '20px' }}>Chatbot</p>
+          <p style={{ color: 'white', margin: '0', padding: '0', bottom: '20px' ,}}>Chatbot</p>
         </div>
       )}
     </div>

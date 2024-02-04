@@ -40,24 +40,29 @@ const CategoryModal = ({ onClose }) => {
           justifyContent: 'center',
         },
         content: {
-          width: '80%',
+          width: '100%',
           maxWidth: '800px',
           height: 'auto',
-          maxHeight: '800px',
-          margin: '10px auto', // Adjust the top margin value
+          maxHeight: '600px', // Adjusted max height
+          margin: 'auto', // Center the modal horizontally
+          marginTop: '20px', // Add top margin for spacing
+          marginBottom: '150px', // Adjusted bottom margin
           border: 'none',
           borderRadius: '15px',
           backgroundColor: '#fff',
-          padding: 20,
+          padding: '15px', // Adjusted padding
           overflow: 'visible',
           position: 'relative',
         },
       }}
     >
-      <button onClick={onClose} style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '24px', cursor: 'pointer', padding: '5px', border: 'none', background: 'none', color: '#000' }}>
+      <button onClick={onClose} style={{ position: 'absolute', top: '1px', right: '10px', fontSize: '24px', cursor: 'pointer', padding: '5px', border: 'none', background: 'none', color: 'black' }}>
         <FontAwesomeIcon icon={faTimes} />
       </button>
+      <h3 style={{ textAlign: 'center' }}>Kategoriler</h3>
+
       <div className="categories-container">
+        
         {categories.map((category, index) => (
           <button key={index} className="category-button">
             <img src={img1} alt={`Category ${index}`} />
