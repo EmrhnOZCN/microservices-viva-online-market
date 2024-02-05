@@ -42,7 +42,7 @@ const Navbar2 = () => {
           </button>
         </div>
         <div className="ml-auto d-flex align-items-center">
-          <button className="custom-button" type="button" onClick={handleSelect3}>
+          <button className="custom-button-sepet" type="button" onClick={handleSelect3}>
             <FontAwesomeIcon icon={faShoppingCart} /> Sepetim <span className="price-info">$50.00</span>
             <FontAwesomeIcon icon={faChevronDown} />
           </button>
@@ -54,7 +54,7 @@ const Navbar2 = () => {
         contentLabel='Konum Modalı'
         style={{
           overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
             zIndex: 1000,
             display: 'flex',
             alignItems: 'center',

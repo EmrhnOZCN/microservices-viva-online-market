@@ -20,10 +20,10 @@
     right: 120px;
 }
 #prev:hover{
-    transform: scale(1) translateX(-50%);
+    transform: scale(1) translateX(-20%);
 }
 #next:hover {
-    transform: scale(1) translateX(50%);
+    transform: scale(1) translateX(20%);
 }
 .slider {
 

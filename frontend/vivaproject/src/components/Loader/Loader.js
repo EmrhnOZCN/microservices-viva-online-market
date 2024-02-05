@@ -13,7 +13,7 @@ const Loader = () => {
       if (isMounted) {
         setLoading(false);
       }
-    }, 1200);
+    }, 1000);
 
     return () => {
       isMounted = false;

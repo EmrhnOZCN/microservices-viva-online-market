@@ -19,12 +19,12 @@
 
 #prevv {
     left: 50px;
+   
     transform: translateX(-50%);
 }
 
 #nextt {
     right: 70px;
-    
     transform: translateX(50%);
 }
 

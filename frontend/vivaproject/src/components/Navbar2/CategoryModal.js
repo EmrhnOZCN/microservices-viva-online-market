@@ -4,8 +4,9 @@ import img1 from '../../assets/meyvesebze.jpg';
 import './CategoryModal.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faAddressCard, faStore, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
-
+import { useNavigate } from 'react-router-dom';
 const CategoryModal = ({ onClose }) => {
+  const navigate = useNavigate();
   const categories = [
     "Tüm İndirimli Ürünler",
     "Sadece Viva'a",
@@ -25,15 +26,33 @@ const CategoryModal = ({ onClose }) => {
     "Pet Shop",
     "Elektronik"
   ];
+  const handleCategoryClick = (category) => {
+    onClose(); // Modal'ı kapat
+    localStorage.setItem('selectedCategory', category);
+    const formattedCategory = category
+      .toLowerCase()
+      .replace(/[üÜ]/g, 'u')
+      .replace(/[ıİ]/g, 'i')
+      .replace(/[öÖ]/g, 'o')
+      .replace(/[çÇ]/g, 'c')
+      .replace(/[şŞ]/g, 's')
+      .replace(/[ğĞ]/g, 'g')
+      .replace(/[^\w\s]/gi, '')
+      .replace(/\s/g, '-');
+
+    navigate(`/${formattedCategory}`);
+    window.location.reload();
+    
+  };
 
   return (
     <Modal
-      isOpen={true}
-      onRequestClose={onClose}
-      contentLabel='Kategori Modalı'
+    isOpen={true}
+    onRequestClose={onClose}
+    contentLabel='Kategori Modalı'
       style={{
         overlay: {
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
           zIndex: 1000,
           display: 'flex',
           alignItems: 'center',
@@ -62,9 +81,8 @@ const CategoryModal = ({ onClose }) => {
       <h3 style={{ textAlign: 'center' }}>Kategoriler</h3>
 
       <div className="categories-container">
-        
         {categories.map((category, index) => (
-          <button key={index} className="category-button">
+          <button key={index} className="category-button" onClick={() => handleCategoryClick(category)}>
             <img src={img1} alt={`Category ${index}`} />
             {category}
           </button>

@@ -13,6 +13,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    localStorage.removeItem('selectedCategory');
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
@@ -25,13 +26,14 @@ const Home = () => {
       {isLoading && <Loader />}
       {!isLoading && (
         <>
-          <Navbar />
-          <Navbar2 />
+       
+      <Navbar2 />
+      
           <Slider />
           <TopicProduct />
           <Category />
           <Products />
-          <Footer />
+       
           <Chat />
         </>
       )}

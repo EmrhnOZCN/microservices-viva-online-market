@@ -8,6 +8,7 @@ import { faUser, faChevronRight, faChevronDown } from '@fortawesome/free-solid-s
 import logo from '../../assets/cart.png';
 
 const Navbar = () => {
+  
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -27,11 +28,17 @@ const Navbar = () => {
     // useNavigate hook'unu kullanarak User.js sayfasına yönlendirme yapalım
     navigate('/giris'); // veya istediğiniz route'a yönlendirme yapabilirsiniz
   };
+  const handleLogoClick = () => {
+    // Handle logo click action
+    console.log('Logo clicked');
+    // Navigate to the desired route using useNavigate
+    navigate('/');
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white m-3">
       <div className="container-fluid mx-auto">
-        <div className="navbar-brand d-flex align-items-center">
+        <div className="navbar-brand d-flex align-items-center" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
           <img src={logo} alt="Logo" className="logo" />
           <span className="ms-3">Viva</span>
         </div>

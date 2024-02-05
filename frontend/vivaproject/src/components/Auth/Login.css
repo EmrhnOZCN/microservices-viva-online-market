@@ -1,0 +1,43 @@
+/* Login.css */
+.vh-100 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .container-fluid-login {
+    background-color: #f8f9fa; /* Background color for the container */
+    border-radius: 10px; /* Optional: Add border-radius for a rounded look */
+    padding: 20px; /* Optional: Adjust padding for spacing */
+  }
+  
+  img.img-fluid {
+    width: 100%;
+    border-radius: 10px; /* Optional: Add border-radius for a rounded look */
+  }
+
+  
+  .btn-primary {
+    background-color: #ff7e00; /* Change this to your desired color */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: darkorange; /* Change this to a darker shade on hover if desired */
+  }
+  
+  .link-color {
+    color: black;
+      text-decoration: none;  /* Danger link color */
+  }
+  
+  .bg-primary {
+    background-color: orange; /* Footer background color */
+  }
+  
+  .text-white {
+    color: orange; /* White text color */
+  }
+  .text-body {
+    text-decoration: none; /* Remove underline from the link */
+  }

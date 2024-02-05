@@ -1,98 +1,89 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import loginlogo from '../../assets/loginlogo.png';
 import { useNavigate } from 'react-router-dom';
-import'../base/base.css';
-import axios from 'axios';
-
-const SignUp = ({ onClose }) => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-
+const SignUp = () => {
   const navigate = useNavigate();
-
-  const handleSignUp = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post('http://localhost:8080/public/register', {
-        firstName,
-        lastName,
-        username,
-        password,
-
-      });
-
-      // Check the response status
-      if (response.status !== 200) {
-        throw new Error('Failed to sign up. Please try again.');
-      }
-
-      // Handle successful sign-up
-      onClose();
-      alert(`Successfully signed up as ${username}!`);
-      navigate('/');
-    } catch (error) {
-      alert(error.message || 'Something went wrong. Please try again.');
-    }
-  };
-
-  // Assuming you have corresponding state setters like setUsername, setPassword, etc.
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
-  const handleFirstNameChange = (e) => {
-    setFirstName(e.target.value);
-  };
-
-  const handleLastNameChange = (e) => {
-    setLastName(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+  const handleLoginClick = () => {
+    // Kayıt ol butonuna tıklandığında /kayit-ol sayfasına yönlendirme yapılıyor
+    navigate('/giris');
   };
   return (
-    <div className="w-full h-full bg-white rounded-2xl relative">
-      {/* Close button */}
-      <button
-        className="absolute top-2 right-4 text-gray-500 hover:text-gray-700 text-2xl font-mono font-extrabold"
-        onClick={onClose}
-      >
-        X
-      </button>
-      {/* Filigree overlay
-      <div className="bg-filigree-once"></div> */}
-      <div id='toptext' className='pt-2'>
-        <h1 className='uppercase font-medium text-center text-3xl mt-8'>Kaydol</h1>
-        <h3 className='font-thin text-center text-sm'><i>Özetleri görüntülemek için hesap oluşturmanız lazım.</i></h3>
-      </div>
-      <form onSubmit={handleSignUp} className=' pl-4 pt-4'>
-        <div className="form-group">
-          <label className='better-labels' htmlFor="email">İsim </label>
-          <input className='better-inputs' type="text" id="firstName" value={firstName} onChange={handleFirstNameChange} />
-        </div>
-        <div className="form-group">
-          <label className='better-labels' htmlFor="email">Soyisim </label>
-          <input className='better-inputs' type="text" id="lastName" value={lastName} onChange={handleLastNameChange} />
-        </div>
-        <div className="form-group">
-          <label className='better-labels' htmlFor="firstName">E-mail </label>
-          <input className='better-inputs' type="text" id="username" value={username} onChange={handleUsernameChange} />
-        </div>
-
-        <div className="form-group">
-          <label className='better-labels' htmlFor="password">Şifre </label>
-          <input className='better-inputs' type="password" id="password" value={password} onChange={handlePasswordChange} />
-        </div>
-        <div className='text-center'>
-          <button className='buttons ' type="submit">Kaydol</button>
-        </div>
+    <div className='container d-flex align-items-center justify-content-center '>
+  <section >
+    <div className="container-fluid-login h-custom ">
+      <div className="row d-flex justify-content-center align-items-center h-100 p-5 ">
         
-      </form>
+        <div className="col-md-8 col-lg-9 col-xl-5 offset-xl-1 " style={{ width: '400px', height: '600px' }}>
+          <form>
+            <div className="d-flex flex-row align-items-center justify-content-center justify-content-end ">
+              <p className="lead fw-bold mb-4 me-3 " style={{ color: '#ff7e00' }}>Kayıt Ol</p>
+            </div>
+
+            {/* Ad Soyad input */}
+            <div className="form-outline mb-4">
+              <input type="text" id="form3Example1" className="form-control form-control-lg" placeholder="Ad Soyad" />
+            </div>
+
+            {/* Doğum Tarihi input */}
+            <div className="form-outline mb-4">
+              <input type="date" id="form3Example2" className="form-control form-control-lg" />
+            </div>
+
+            {/* Telefon Numarası input */}
+            <div className="form-outline mb-4">
+              <input type="tel" id="form3Example3" className="form-control form-control-lg" placeholder="Telefon Numarası" />
+            </div>
+
+            {/* Email input */}
+            <div className="form-outline mb-4">
+              <input type="email" id="form3Example4" className="form-control form-control-lg" placeholder="E-posta Adresi" />
+            </div>
+
+            {/* Password input */}
+            <div className="form-outline mb-4">
+              <input type="password" id="form3Example5" className="form-control form-control-lg" placeholder="Şifre" />
+            </div>
+
+            <div className="d-flex justify-content-between align-items-center">
+              {/* Checkbox */}
+              <div className="form-check mb-0">
+                <input className="form-check-input me-2" type="checkbox" value="" id="form2Example6" />
+                <label className="form-check-label" htmlFor="form2Example6">
+                  Beni hatırla
+                </label>
+              </div>
+            </div>
+
+            <button type="button" className="btn btn-primary btn-floating mx-1 my-4">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </button>
+
+            <button type="button" className="btn btn-primary btn-floating mx-1">
+              <FontAwesomeIcon icon={faTwitter} />
+            </button>
+
+            <button type="button" className="btn btn-primary btn-floating mx-1">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </button>
+
+            <div className="text-center text-lg-start pt-2 ">
+              <button type="button" className="btn btn-primary btn-lg " style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }}>Kayıt Ol</button>
+              <p className="small mt-2 pt-1 mb-0">Hesabınız var mı?
+                <a className="link-color fw-bold p-1" onClick={handleLoginClick}>
+                  Giriş Yap
+                </a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </section>
+</div>
+
+  
   );
 };
 

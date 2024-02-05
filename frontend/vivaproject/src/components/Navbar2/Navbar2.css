@@ -16,6 +16,7 @@
 }
 
 .custom-button:hover,
+.custom-button-sepet:hover,
 .login-button:hover {
   background-color: #ff7e00;
   color: white;
@@ -59,4 +60,19 @@
   top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.custom-button-sepet {
+  font-size: 13px;
+  font-weight: 420; /* Adjust font weight for thinner text */
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-right: 55px;
+  border: 2px solid #ff7e00;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  width: 150px;
+  height: 45px;
 }

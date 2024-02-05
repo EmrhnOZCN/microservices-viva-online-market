@@ -4,11 +4,13 @@ import { faFacebookF, faTwitter, faGoogle, faInstagram, faLinkedinIn, faGithub }
 
 const Footer = () => {
   return (
-    <div className="container my-5">
+  
+    <div className=" position: 'fixed', bottom: 0, width: '100%'  " style={{ boxShadow: '0px 0px 3px 0px #000000' } } >
       {/* Footer */}
+       
       <footer
-        className="text-center text-lg-start text-white"
-        style={{ backgroundColor: '#929fba' }}
+        className="text-center text-lg-start text-black mt-5 "
+        style={{ backgroundColor: '#f9f9f9' }}
       >
         {/* Grid container */}
         <div className="container p-4 pb-0">
@@ -17,9 +19,9 @@ const Footer = () => {
             {/* Grid row */}
             <div className="row">
               {/* Grid column */}
-              <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                  Company name
+                  Viva
                 </h6>
                 <p>
                   Here you can use rows and columns to organize your footer
@@ -30,41 +32,20 @@ const Footer = () => {
               {/* Grid column */}
 
               {/* Grid column */}
-              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 className="text-uppercase mb-4 font-weight-bold">
-                  Products
-                </h6>
-                <p>
-                  <a className="text-white">MDBootstrap</a>
-                </p>
-                <p>
-                  <a className="text-white">MDWordPress</a>
-                </p>
-                <p>
-                  <a className="text-white">BrandFlow</a>
-                </p>
-                <p>
-                  <a className="text-white">Bootstrap Angular</a>
-                </p>
-              </div>
-              {/* Grid column */}
 
               {/* Grid column */}
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 className="text-uppercase mb-4 font-weight-bold">
-                  Contact
+                <h6 className="text-uppercase mb-4 font-weight-bold text-black">
+                  İLETİŞİM
                 </h6>
                 <p>
-                  <i className="fas fa-home mr-3"></i> New York, NY 10012, US
+                  <i className="fas fa-home mr-3"></i> Ankara
                 </p>
                 <p>
-                  <i className="fas fa-envelope mr-3"></i> info@gmail.com
+                  <i className="fas fa-envelope mr-3"></i> emrhnozcnceng@gmail.com
                 </p>
                 <p>
-                  <i className="fas fa-phone mr-3"></i> + 01 234 567 88
-                </p>
-                <p>
-                  <i className="fas fa-print mr-3"></i> + 01 234 567 89
+                  <i className="fas fa-phone mr-3"></i> + 05309393557
                 </p>
               </div>
               {/* Grid column */}
@@ -72,7 +53,7 @@ const Footer = () => {
               {/* Grid column */}
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                  Follow us
+                  TAKİP
                 </h6>
 
                  {/* Facebook */}
@@ -117,7 +98,7 @@ const Footer = () => {
 
                 {/* Linkedin */}
                 <a
-                  className="btn btn-primary btn-floating m-1"
+                  className="btn btn-primary btn-floating m-1 "
                   style={{ backgroundColor: '#0082ca' }}
                   href="#!"
                   role="button"
@@ -145,11 +126,11 @@ const Footer = () => {
         {/* Copyright */}
         <div
           className="text-center p-3"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
         >
-          © 2020 Copyright:
-          <a className="text-white" href="https://mdbootstrap.com/">
-            MDBootstrap.com
+          © 2024 Telif Hakkı:
+          <a className="text-black " href="https://mdbootstrap.com/">
+              emrhnozcnceng@gmail.com
           </a>
         </div>
         {/* Copyright */}

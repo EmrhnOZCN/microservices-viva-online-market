@@ -51,7 +51,7 @@ const Products = () => {
         <div className='sliderr-containerr'>
        
         <button id='prevv' className='btnn-scroll'>
-                <FontAwesomeIcon icon={faArrowLeft} />
+               
             </button>
         <div className='sliderr'>
         
@@ -137,7 +137,7 @@ const Products = () => {
             </div>
         </div>
         <button id='nextt' className='btnn-scroll' >
-                <FontAwesomeIcon icon={faArrowRight} />
+             
             </button>
         </div></div>
     );

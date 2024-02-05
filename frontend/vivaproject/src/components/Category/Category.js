@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,8 +9,21 @@ import reklamcatg2 from '../../assets/reklamcatg2.jpg';
 import reklamcatg3 from '../../assets/reklamcatg3.jpg';
 
 const Category = () => {
+  const navigate = useNavigate();
   const handleClick = (category) => {
     console.log(`${category} kategorisi tıklandı.`);
+    const formattedCategory = category
+      .toLowerCase()
+      .replace(/[üÜ]/g, 'u')
+      .replace(/[ıİ]/g, 'i')
+      .replace(/[öÖ]/g, 'o')
+      .replace(/[çÇ]/g, 'c')
+      .replace(/[şŞ]/g, 's')
+      .replace(/[ğĞ]/g, 'g')
+      .replace(/[^\w\s]/gi, '')
+      .replace(/\s/g, '-');
+
+    navigate(`/${formattedCategory}`);
   };
 
   const categories = [
