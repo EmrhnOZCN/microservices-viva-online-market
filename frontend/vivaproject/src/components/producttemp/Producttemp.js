@@ -41,12 +41,116 @@ const Producttemp = () => {
         <Navbar2></Navbar2>
           <div className='container'>
             <div className='row'>
-              <div className='col-md-3'>
-                <h2>{category} Ürünleri</h2>
+              <div className='col-md-3  border'>
+            
+                  <div className='col-md-12 bg-gray mb-3 p-4 border-bottom'>
+                  <h2>{category} </h2>
+                  <span>573 ürün</span>
+                  </div>
+                  <div className='col-md-8 bg-gray mb-3 p-4 border-bottom'>
+                      <h3>Alt Kategoriler</h3>
+                      <p>Kırmızı Et (153)</p>
+                      <p>Kırmızı Et (153)</p>
+                      <p>Kırmızı Et (153)</p>
+                      <p>Kırmızı Et (153)</p>
+                  </div>
+                  <div className='col-md-12 bg-gray mb-3 p-4 border-bottom'>
+
+        <h3 className='mb-4'>Markalar</h3>
+        <div className="input-group mb-4">
+            <input type="text" className="form-control" placeholder="Marka Ara" aria-label="Marka Ara" />
+            <div className="input-group-append">
+                <button className="btn btn-outline-secondary" type="button">Ara</button>
+            </div>
+        </div>
+        <div className="overflow-auto mt-2 mb-4" style={{ maxHeight: '150px' }}>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka1" />
+                <label className="form-check-label" htmlFor="marka1">
+                    Marka İsmi 1
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="marka2" />
+                <label className="form-check-label" htmlFor="marka2">
+                    Marka İsmi 2
+                </label>
+            </div>
+
+            {/* Diğer markalar buraya eklenmeli */}
+        </div>
+    </div>
+                  <div className='col-md-12 bg-gray p-4'>
+                      <h3>İndirimler</h3>
+                      <p>Money İndirimli Market Ürünleri (85)</p>
+                  </div>
+
               </div>
               <div className='col-md-9'>
-                <div>
-                  <h2>{category} </h2>
+                <div className=''>
+                  <h2 className=''>{category} </h2>
                   <div className='dropdown-container'>
                     <button className='btnnn-oynerilenler' onClick={toggleDropdown}>
                       <FontAwesomeIcon icon={faDownLong} className={`arrow-updown2-icon ${showDropdown && 'active'}`} style={{ fontSize: '12px' }} />

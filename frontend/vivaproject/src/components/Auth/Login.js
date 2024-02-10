@@ -6,10 +6,15 @@ import { useNavigate } from 'react-router-dom';
 import loginlogo from '../../assets/loginlogo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Loader from '../Loader/Loader';
+import ReCAPTCHA from 'react-google-recaptcha'; // Google reCAPTCHA ekledik
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+  const [captchaValue, setCaptchaValue] = useState(null); // reCAPTCHA değeri için state ekledik
+
+
+  
   useEffect(() => {
     localStorage.removeItem('selectedCategory');
     const timer = setTimeout(() => {
@@ -18,9 +23,28 @@ const Login = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+
+
   const handleRegisterClick = () => {
+
     // Kayıt ol butonuna tıklandığında /kayit-ol sayfasına yönlendirme yapılıyor
     navigate('/kayit-ol');
+  };
+
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
+  const handleLogin = () => {
+    if (captchaValue) {
+      // reCAPTCHA doğrulaması başarılı ise giriş işlemini gerçekleştir
+      console.log('reCAPTCHA doğrulaması başarılı!');
+      // Buraya giriş işlemlerini ekleyin
+    } else {
+      alert('Lütfen reCAPTCHA doğrulamasını tamamlayın!');
+    }
   };
 
   return (
@@ -80,7 +104,12 @@ const Login = () => {
                     </button>
 
                     <div className="text-center text-lg-start pt-2 ">
-                      <button type="button" className="btn btn-primary btn-lg "
+                    <ReCAPTCHA
+                        sitekey="6Lc5U24pAAAAANFPw_NAGl8ouzadd5aThfuaP3lI
+                        " // Buraya kendi site anahtarınızı girin
+                        onChange={handleCaptchaChange} // reCAPTCHA değeri değiştiğinde bu işlevi çağırır
+                      />
+                      <button type="button" className="btn btn-primary btn-lg mt-3"
                         style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }}>Giriş Yap</button>
                        <p className="small mt-2 pt-1 mb-0">Hesabınız yok mu? 
               <a  className="link-color fw-bold p-1 " onClick={handleRegisterClick} style={{ cursor: 'pointer' }}>
