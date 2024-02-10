@@ -10,6 +10,7 @@ import CategoryModal from './CategoryModal';
 const Navbar2 = () => {
   const [isKonumModalOpen, setIsKonumModalOpen] = useState(false);
   const [isKategoriModalOpen, setIsKategoriModalOpen] = useState(false);
+  const [isSepetModalOpen, setIsSepetModalOpen] = useState(false); // 1. Sepet modalını açmak için state tanımı
 
   const handleSelect1 = () => {
     setIsKonumModalOpen(true);
@@ -22,12 +23,17 @@ const Navbar2 = () => {
   const handleSelect2 = () => {
     setIsKategoriModalOpen(true);
   };
-  const handleSelect3 = () => {
-    
-  };
 
   const handleCloseKategoriModal = () => {
     setIsKategoriModalOpen(false);
+  };
+
+  const handleSelect3 = () => {
+    setIsSepetModalOpen(true); // 2. Sepet modalını aç
+  };
+
+  const handleCloseSepetModal = () => {
+    setIsSepetModalOpen(false); // 5. Sepet modalını kapat
   };
 
   return (
@@ -48,6 +54,43 @@ const Navbar2 = () => {
           </button>
         </div>
       </div>
+
+      {/* 3. Sepet Modal */}
+      <Modal
+        isOpen={isSepetModalOpen}
+        onRequestClose={handleCloseSepetModal}
+        contentLabel='Sepet Modalı'
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 1000,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
+          content: {
+            width: '80%',
+            maxWidth: '800px',
+            height: 'auto',
+            maxHeight: '800px',
+            margin: '0 auto',
+            border: 'none',
+            borderRadius: '15px',
+            backgroundColor: '#fff',
+            padding: 20,
+            overflow: 'visible',
+            position: 'relative',
+          },
+        }}
+      >
+        {/* Sepet içeriğini buraya yerleştirin */}
+        <div>Sepet İçeriği</div>
+
+        {/* Sepet modalını kapatma butonu */}
+        <button onClick={handleCloseSepetModal}>Sepeti Kapat</button>
+      </Modal>
+
+      {/* Konum ve Kategori Modal bileşenleri */}
       <Modal
         isOpen={isKonumModalOpen}
         onRequestClose={handleCloseKonumModal}
@@ -74,7 +117,7 @@ const Navbar2 = () => {
             position: 'relative',
           },
         }}
-      > 
+      >
         <KonumModal onClose={handleCloseKonumModal} />
       </Modal>
       <Modal
@@ -92,7 +135,7 @@ const Navbar2 = () => {
           content: {
             width: '80%',
             maxWidth: '800px',
-            
+
             height: 'auto',
             maxHeight: '800px',
             margin: '0 auto',
@@ -104,10 +147,9 @@ const Navbar2 = () => {
             position: 'relative',
           },
         }}
-      > 
+      >
         <CategoryModal onClose={handleCloseKategoriModal} />
       </Modal>
-     
     </nav>
   );
 };
