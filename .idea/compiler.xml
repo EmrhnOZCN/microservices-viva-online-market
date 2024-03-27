@@ -8,25 +8,29 @@
         <outputRelativeToContentRoot value="true" />
         <module name="chatbot-service" />
         <module name="cart-service" />
-        <module name="payment-service" />
         <module name="stockManangment-service" />
         <module name="product-service" />
-        <module name="report-service" />
         <module name="user-service" />
-        <module name="order-service" />
         <module name="basket-service" />
         <module name="eureka-server" />
-        <module name="admin-service" />
         <module name="campaign-service" />
+        <module name="auth-service" />
+        <module name="payment-service" />
+        <module name="gateway-service" />
+        <module name="report-service" />
+        <module name="order-service" />
+        <module name="admin-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-service" target="17" />
+      <module name="auth-service" target="17" />
       <module name="basket-service" target="17" />
       <module name="campaign-service" target="17" />
       <module name="cart-service" target="17" />
       <module name="chatbot-service" target="17" />
       <module name="eureka-server" target="17" />
+      <module name="gateway-service" target="17" />
       <module name="order-service" target="17" />
       <module name="payment-service" target="17" />
       <module name="product-service" target="17" />
@@ -38,11 +42,13 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-service" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
       <module name="basket-service" options="-parameters" />
       <module name="campaign-service" options="-parameters" />
       <module name="cart-service" options="-parameters" />
       <module name="chatbot-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
